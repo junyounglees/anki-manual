@@ -8,7 +8,7 @@ You can watch [a video about styling cards](http://www.youtube.com/watch?v=F1j1Z
 The video shows Anki 2.0’s interface, but the concepts are largely the
 same.
 
-The styling section of the Cards screen can accessed by clicking the
+The styling section of the Cards screen can be accessed by clicking the
 "Styling" button next to the "Back Template" button. In that section,
 you can change the background color of the card, the default font, the
 text alignment, and so on.
@@ -375,7 +375,7 @@ yellow when night mode is enabled:
 
 ## Fading and Scrolling
 
-Anki will automatically scroll to the answer by default. It looks for a
+Anki will automatically scroll to the answer by default. It looks for an
 HTML element with id=answer, and scrolls to that. You can place the id
 on a different element to adjust the scrolling position, or remove the
 id=answer to turn off scrolling.

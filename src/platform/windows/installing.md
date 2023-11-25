@@ -8,7 +8,7 @@ Recent Anki releases require a computer running the 64 bit version of Windows
 10 or 11.
 
 - The last Anki release that supported Windows 7 and 8.1 was Anki 2.1.49.
-- The last Anki release that supported 32 bit Windows was Anki 2.1.35-alternate.
+- The last Anki release that supported 32 bit Windows was [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35).
 
 If you're on an old machine, you can obtain old releases from the [releases page](https://github.com/ankitects/anki/releases).
 
@@ -20,7 +20,7 @@ To install Anki:
    for how to choose between -qt5 and -qt6.
 2. Save the installer to your desktop or downloads folder.
 3. Double-click on the installer to run it. If you see an error
-   message, please see the links on the left.
+   message, please see the [installation issues page](https://github.com/ankitects/anki-manual/blob/main/src/platform/windows/installation-issues.md).
 4. Once Anki is installed, double-click on the new star icon on your
    desktop to start Anki.
 
@@ -35,11 +35,11 @@ Advantages of the Qt6 version:
 - Very large images load faster than the Qt5 version.
 - Security updates. Support for the Qt5 library was discontinued in Nov 2020,
   meaning that any security flaws discovered since then will remain unfixed.
+- Some users experience freezes when using [a custom shortcut key to switch input languages](https://github.com/ankitects/anki/issues/1105)
+  in Qt5.
 
 Disadvantages of the Qt6 version:
 
-- Some users experience freezes when using [a custom shortcut key to switch input languages](https://github.com/ankitects/anki/issues/1105). This issue can be worked around in the
-  Qt5 version by switching the video driver to ANGLE, but ANGLE is not available in Qt6.
 - Some add-ons currently only work with the Qt5 version.
 
 ## Upgrading
@@ -65,4 +65,6 @@ you can download older Anki versions from the [releases page](https://github.com
 ## Problems
 
 If you encounter any issues when installing or starting Anki, please see the
-following links on the left.
+following pages:
+- [Installation Issues](https://docs.ankiweb.net/platform/windows/installation-issues.html)
+- [Startup Issues](https://docs.ankiweb.net/platform/windows/startup-issues.html)

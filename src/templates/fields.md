@@ -65,7 +65,7 @@ each line, you would use
     {{Field 1}}<br>
     {{Field 2}}
 
-## Text to Speech
+## Text to Speech for individual fields
 
 This feature requires Anki 2.1.20, or AnkiMobile 2.0.56. AnkiDroid does
 not currently support this method.
@@ -158,6 +158,19 @@ html:not(.android) .ankidroidTtsButton {
 }
 ```
 
+## Text to Speech for multiple fields and static text
+
+This feature requires Anki 2.1.50+ or AnkiMobile 2.0.84+ . AnkiDroid does
+not currently support this method.
+
+If you want TTS to read multiple fields or static text included in the template, you can use the following:
+
+```
+[anki:tts lang=en_US] This text should be read. Here is {{Field1}} and {{Field2}}[/anki:tts]
+
+This is other text on the template. It is outside of the tags so it should not be read.
+```
+
 ## Special Fields
 
 There are some special fields you can include in your templates:
@@ -193,7 +206,7 @@ adding a hint, please bear in mind that the easier you make it to answer
 a question in Anki, the less likely you are to remember that question
 when you encounter it in real life. Please have a read about the
 'minimum information principle' on
-<http://www.supermemo.com/articles/20rules.htm> before proceeding.
+<https://super-memory.com/articles/20rules.htm> before proceeding.
 
 First, you’ll need to add a field to store the hint in if you have not
 already. Please see the [fields](../editing.md#customizing-fields) section if you’re not sure how
@@ -323,7 +336,7 @@ entirely.
 | `日本語[にほんご]` | `{{kana:MyField}}`     | にほんご                                      |
 | `日本語[にほんご]` | `{{kanji:MyField}}`    | 日本語                                        |
 
-These names are again, borrowed from Japanese.
+These names are, again, borrowed from Japanese.
 The term [kana](https://en.wikipedia.org/wiki/Kana) represents the phonetic
 system used to describe how words are pronounced, whereas the term
 [kanji](https://en.wikipedia.org/wiki/Kanji) represents its Chinese characters.

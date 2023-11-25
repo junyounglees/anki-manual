@@ -1,11 +1,14 @@
 # Display Issues on macOS
 
-### Qt6 Video Driver
+<!-- toc -->
 
-Hardware acceleration defaults to on. This should be fine for most Macs, but if you
-are experiencing crashes or display issues, you can try enabling software rendering.
+## Qt6 Video Driver
 
-Open Terminal.app, then paste the following and hit enter:
+If you're experiencing display issues or crashes in Anki 23.10+, you can try
+changing the video driver in the preferences screen, then restarting Anki.
+
+Older Anki versions did not provide an option in the preferences, but allowed
+you to adjust the driver by opening Terminal.app, then pasting the following and hit enter:
 
 ```
 echo software > ~/Library/Application\ Support/Anki2/gldriver6

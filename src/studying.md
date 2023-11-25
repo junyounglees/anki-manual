@@ -73,8 +73,9 @@ There are four rating buttons when learning:
 - **Again** moves the card back to the first step.
 
 - **Hard** repeats the current step.
-  - If the card is on the first step, the delay will be the average of Again and Good.
-  - After the first step, Hard repeats the previous delay.
+  - If the card is on the first (and the only) step, the delay is 50% larger than the step. But, this delay is at most one day larger than the step.
+  - If the card is on the first step and the you have configured more than one step, the delay will be the average of Again and Good, i.e., the average of the first two steps.
+  - If the card is on any subsequent step, Hard repeats the previous delay.
 
 - **Good** moves the card to the [next step](deck-options.md#learning-steps). If the card was on the final
   step, the card is converted into a review card (it 'graduates'). By
@@ -147,7 +148,7 @@ cards in that queue, not the number of _cards_. If you have multiple
 steps configured for lapsed cards, the number will increase by more than
 one when you fail a card, since that card needs to be shown several times.
 
-From the v2 scheduler, the numbers count _cards_, so the number will always
+From the [v2 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html), the numbers count _cards_, so the number will always
 increase by one regardless of the steps remaining.
 
 When the answer is shown, Anki shows an estimate of the next time a card
@@ -191,8 +192,8 @@ card or note:
   another time. Burying can also [happen automatically](studying.md#siblings-and-burying) for
   cards of the same note.
 
-  With the old scheduler, if cards were in learning when they are buried,
-  they are moved back to the new card queue or review queue prior to being
+  With the old scheduler, if cards were in learning when they were buried,
+  they were moved back to the new card queue or review queue prior to being
   buried.
 
   With the [2.1 scheduler](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
@@ -201,7 +202,7 @@ card or note:
 - **Forget card**: Move current card to [the end of the new queue](browsing.md#cards).
 
   From Anki 2.1.50+, Anki will remember the original order of a new card when it is first studied
-  with the V3 scheduler. The "Restore original position" option allows you to reset the card back
+  with the v3 scheduler. The "Restore original position" option allows you to reset the card back
   to its original position when you forget it.
 
   The "Reset repetition and lapse count" option, if enabled, will set the review and failure counters
