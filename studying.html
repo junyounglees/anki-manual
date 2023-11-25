@@ -216,8 +216,9 @@ steps and the delays between them in the <a href="deck-options.html#new-cards">d
 <li>
 <p><strong>Hard</strong> repeats the current step.</p>
 <ul>
-<li>If the card is on the first step, the delay will be the average of Again and Good.</li>
-<li>After the first step, Hard repeats the previous delay.</li>
+<li>If the card is on the first (and the only) step, the delay is 50% larger than the step. But, this delay is at most one day larger than the step.</li>
+<li>If the card is on the first step and the you have configured more than one step, the delay will be the average of Again and Good, i.e., the average of the first two steps.</li>
+<li>If the card is on any subsequent step, Hard repeats the previous delay.</li>
 </ul>
 </li>
 <li>
@@ -289,7 +290,7 @@ you can turn them off in Anki’s <a href="preferences.html">preferences.</a></p
 cards in that queue, not the number of <em>cards</em>. If you have multiple
 steps configured for lapsed cards, the number will increase by more than
 one when you fail a card, since that card needs to be shown several times.</p>
-<p>From the v2 scheduler, the numbers count <em>cards</em>, so the number will always
+<p>From the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 scheduler</a>, the numbers count <em>cards</em>, so the number will always
 increase by one regardless of the steps remaining.</p>
 <p>When the answer is shown, Anki shows an estimate of the next time a card
 will be shown above each button. If you’d prefer not to see the
@@ -327,8 +328,8 @@ button on the <a href="studying.html#study-overview">deck overview</a> screen.) 
 you cannot answer the card at the moment or you want to come back to it
 another time. Burying can also <a href="studying.html#siblings-and-burying">happen automatically</a> for
 cards of the same note.</p>
-<p>With the old scheduler, if cards were in learning when they are buried,
-they are moved back to the new card queue or review queue prior to being
+<p>With the old scheduler, if cards were in learning when they were buried,
+they were moved back to the new card queue or review queue prior to being
 buried.</p>
 <p>With the <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">2.1 scheduler</a>,
 however, burying cards does not reset a card's learning steps.</p>
@@ -336,7 +337,7 @@ however, burying cards does not reset a card's learning steps.</p>
 <li>
 <p><strong>Forget card</strong>: Move current card to <a href="browsing.html#cards">the end of the new queue</a>.</p>
 <p>From Anki 2.1.50+, Anki will remember the original order of a new card when it is first studied
-with the V3 scheduler. The &quot;Restore original position&quot; option allows you to reset the card back
+with the v3 scheduler. The &quot;Restore original position&quot; option allows you to reset the card back
 to its original position when you forget it.</p>
 <p>The &quot;Reset repetition and lapse count&quot; option, if enabled, will set the review and failure counters
 for the card back to zero. It does not remove the review history that is shown at the bottom of the

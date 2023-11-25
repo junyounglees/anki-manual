@@ -150,7 +150,8 @@
 <ul>
 <li><a href="#basic-replacements">Basic Replacements</a></li>
 <li><a href="#newlines">Newlines</a></li>
-<li><a href="#text-to-speech">Text to Speech</a></li>
+<li><a href="#text-to-speech-for-individual-fields">Text to Speech for individual fields</a></li>
+<li><a href="#text-to-speech-for-multiple-fields-and-static-text">Text to Speech for multiple fields and static text</a></li>
 <li><a href="#special-fields">Special Fields</a></li>
 <li><a href="#hint-fields">Hint Fields</a></li>
 <li><a href="#dictionary-links">Dictionary Links</a></li>
@@ -218,7 +219,7 @@ each line, you would use</p>
 <pre><code>{{Field 1}}&lt;br&gt;
 {{Field 2}}
 </code></pre>
-<h2 id="text-to-speech"><a class="header" href="#text-to-speech">Text to Speech</a></h2>
+<h2 id="text-to-speech-for-individual-fields"><a class="header" href="#text-to-speech-for-individual-fields">Text to Speech for individual fields</a></h2>
 <p>This feature requires Anki 2.1.20, or AnkiMobile 2.0.56. AnkiDroid does
 not currently support this method.</p>
 <p>To have Anki read the Front field in a US English voice, you can place
@@ -297,6 +298,14 @@ html:not(.android) .ankidroidTtsButton {
   display: none;
 }
 </code></pre>
+<h2 id="text-to-speech-for-multiple-fields-and-static-text"><a class="header" href="#text-to-speech-for-multiple-fields-and-static-text">Text to Speech for multiple fields and static text</a></h2>
+<p>This feature requires Anki 2.1.50+ or AnkiMobile 2.0.84+ . AnkiDroid does
+not currently support this method.</p>
+<p>If you want TTS to read multiple fields or static text included in the template, you can use the following:</p>
+<pre><code>[anki:tts lang=en_US] This text should be read. Here is {{Field1}} and {{Field2}}[/anki:tts]
+
+This is other text on the template. It is outside of the tags so it should not be read.
+</code></pre>
 <h2 id="special-fields"><a class="header" href="#special-fields">Special Fields</a></h2>
 <p>There are some special fields you can include in your templates:</p>
 <pre><code>The note's tags: {{Tags}}
@@ -327,7 +336,7 @@ adding a hint, please bear in mind that the easier you make it to answer
 a question in Anki, the less likely you are to remember that question
 when you encounter it in real life. Please have a read about the
 'minimum information principle' on
-<a href="http://www.supermemo.com/articles/20rules.htm">http://www.supermemo.com/articles/20rules.htm</a> before proceeding.</p>
+<a href="https://super-memory.com/articles/20rules.htm">https://super-memory.com/articles/20rules.htm</a> before proceeding.</p>
 <p>First, you’ll need to add a field to store the hint in if you have not
 already. Please see the <a href="../editing.html#customizing-fields">fields</a> section if you’re not sure how
 to do this.</p>
@@ -431,7 +440,7 @@ entirely.</p>
 <tr><td><code>日本語[にほんご]</code></td><td><code>{{kanji:MyField}}</code></td><td>日本語</td></tr>
 </tbody></table>
 </div>
-<p>These names are again, borrowed from Japanese.
+<p>These names are, again, borrowed from Japanese.
 The term <a href="https://en.wikipedia.org/wiki/Kana">kana</a> represents the phonetic
 system used to describe how words are pronounced, whereas the term
 <a href="https://en.wikipedia.org/wiki/Kanji">kanji</a> represents its Chinese characters.</p>
